@@ -1,0 +1,149 @@
+.container {
+  @include flex;
+  flex-direction: column;
+  margin: 20px auto;
+  @include media-query('tablet-landscape'){
+    max-width: 1500px;
+    flex-direction: row;
+    justify-content: space-between;
+    .left-section,
+    .right-section {
+      flex: 0 0 296px;
+    }
+  }
+  & > div {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+//  about me starts
+.about-me {
+  background: linear-gradient(map-get($colors, 'orange') 0px, map-get($colors, 'orange') 70px, map-get($colors, 'white') 70px, map-get($colors, 'white') 100%);
+  padding-top: 35px;
+  text-align: center;
+  .img-container {
+    width: 80px;
+    margin: 0 auto 10px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid map-get($colors, 'black');
+  }
+  .designation {
+    @include font-specs(16, 16, 0);
+    margin-top: 10px;
+  }
+  .details {
+    @include flex;
+    flex-direction: column;
+    margin-top: 15px;
+    p{
+      color: map-get($colors, "lightgrey");
+      text-align: left;
+      text-transform: capitalize;
+      margin: 10px 0;
+      padding: 0 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+// about me ends
+
+// certificate section starts
+
+.certificate {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  img {
+    max-width: 40%;
+    margin-right: 15px;
+  }
+  h3 {
+    @include font-specs(24, 30, 1);
+    font-weight: bold;
+  }
+}
+
+//  certificate section ends
+
+// post section starts
+
+.new-post {
+  input[type=text] {
+    padding: 20px 10px;
+  }
+  .post-actions {
+    background-color: map-get($colors, 'offWhite' );
+    padding: 15px 10px;
+    display: flex;
+    input[type=submit] {
+      margin-left: auto;
+      background-color: map-get($colors, "headerBG");
+      color: map-get($colors, "white");
+      padding: 5px 15px;
+      border: none;
+    }
+    a {
+      margin-right: 20px;
+      padding: 5px 10px;
+      color: map-get($colors, 'post' );
+      &:before {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+// tab section
+
+.tabs {
+  a {
+    padding: 15px 15px 13px;
+    display: inline-block;
+    border-bottom: 2px solid transparent;
+    &.active {
+      background-color: map-get($colors, 'white');
+      border-bottom-color: map-get($colors, 'orange');
+      border-top-right-radius: $border-radius;
+      border-top-left-radius: $border-radius;
+      color: map-get($colors, 'lightgrey');
+    }
+  }
+}
+
+.tab-content {
+  padding: 20px 15px;
+  @include media-query('tablet-landscape') {
+    .note {
+      width: 90%;
+    }
+  }
+  .my-referrals {
+    @include flex;
+    border: 1px solid map-get($colors, 'lightgrey');
+    margin-top: 15px;
+    border-radius: $border-radius;
+    padding: 15px;
+    justify-content: space-between;
+    h2, button {
+      margin-bottom: 10px;
+    }
+    .amount {
+      @extend .bold-text;
+    }
+    button {
+      background-color: map-get($colors, 'orange');;
+      border: none;
+      border-radius: $border-radius;
+      color: map-get($colors, 'white');
+      padding: 10px;
+    }
+    & + .more {
+      margin: 15px auto 0;
+      text-align: center;
+    }
+  }
+}

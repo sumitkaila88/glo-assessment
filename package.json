@@ -1,0 +1,21 @@
+{
+  "name": "assessment",
+  "version": "1.0.0",
+  "description": "Global Logic assessment",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "file-loader": "^5.1.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "scripts": {
+    "dev": "webpack --watch",
+    "build": "webpack --config webpack.config.js --mode='production'"
+  },
+  "keywords": [],
+  "author": "Sumit kaila",
+  "license": "ISC"
+}

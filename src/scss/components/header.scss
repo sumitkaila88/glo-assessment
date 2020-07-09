@@ -1,0 +1,58 @@
+.header {
+  @include flex;
+  background-color: map-get($colors , 'headerBG');
+  padding: 15px;
+  .header-content {
+    margin-left: 20px;
+    display: none;
+    @include media-query('tablet-landscape') {
+      @include flex;
+      width: 100%;
+      flex-direction: column;
+      &>div {
+        @include flex;
+        justify-content: space-between;
+      }
+    }
+    .menu-grid {
+      font-size: 20px;
+      margin-left: auto;
+      align-self: center;
+      margin-right: 30px;
+    }
+    form {
+      @include flex;
+      width: 60%;
+      margin-bottom: 5px;
+      align-items: baseline;
+      .select {
+        flex: 0.2 0 0;
+      }
+      input {
+        flex: 1 0 0;
+      }
+      a {
+        align-self: center;
+        background: map-get($colors, "white");
+        padding: 10px 10px 9px;
+        border-top-right-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+      }
+    }
+    .user {
+      max-width: 25px;
+      align-self: center;
+    }
+  }
+  .social-nav {
+    li {
+      margin-right: 30px;
+      &:last-child{
+        margin-right: 0;
+      }
+      a {
+        font-size: 20px;
+      }
+    }
+  }
+}

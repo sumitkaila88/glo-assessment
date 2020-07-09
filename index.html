@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./dist/css/app.min.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <title>assessment</title>
+</head>
+<body>
+  <header class = "header">
+    <h1>
+      <a href="/"><img src="./dist/images/logo.jpg" alt="Logo, Click to go to home"></a>
+    </h1>
+    <div class="header-content">
+      <div class="top">
+
+        <form action="/">
+          <div class="select">
+            <select name="search" id="search-select">
+              <option value="people" selected>People</option>
+              <option value="content">content</option>
+            </select>
+          </div>
+          <input type="search" placeholder="Search People by name, email, designation, phone...">
+          
+          <a href="#" class = "adv-search">Advanced Search</a>
+        </form>
+        <a href="#" class="menu-grid fa fa-th"></a>
+        <a href="#" class="user"><img src="./dist/images/user.png" alt=""></a>
+      </div>
+      <div class="bottom">
+
+        
+        <nav class="primary-nav">
+          <ul>
+            <li><a href="#">My Profile</a></li>
+            <li><a href="#">Clients</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Organisations</a></li>
+            <li><a href="#">Communities</a></li>
+            <li><a href="#">Apps</a></li>
+            <li><a href="#">Practices</a></li>
+          </ul>
+        </nav>
+        
+        <nav class="social-nav">
+          <ul>
+            <li><a href="#" class="fab fa-facebook"></a></li>
+            <li><a href="#" class="fab fa-twitter"></a></li>
+            <li><a href="#" class="fab fa-linkedin"></a></li>
+            <li><a href="#" class="fab fa-youtube"></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="left-section">
+      <article class="about-me box">
+        <div class="img-container">
+          <img src="./dist/images/myprofile.jpg" alt="This is your profile pic">
+        </div>
+        <h2>Rian Hooper</h2>
+        <p class="designation">Consultant, Engineering</p>
+        <div class="details">
+          <p>People who follow me<span>9</span></p>
+          <p>People i follow<span>3</span></p>
+          <p>teammates<span>117</span></p>
+          <p>my communities<span>28</span></p>
+        </div>
+      </article>
+
+      <article class="certificate box">
+        <img src="./dist/images/greatplace.png" alt="GlobalLogic is proud to be certified s a great place to work">
+        <h3>GlobalLogic is proud to be certified s a great place to work</h3>
+
+      </article>
+    </div>
+    <div class="middle-section">
+      <form action="post" class="new-post box">
+        <input type="text" name="post" id="post" placeholder = "What are you doing?">
+        <div class="post-actions">
+          <a href="#" class="fa fa-image">Add Photo</a>
+          <a href="#" class="fa fa-video">Add Video</a>
+          <input type="submit" value="Share">
+        </div>
+      </form>
+
+      <div class="tabs">
+        <a href="#referral" class="active">Referral</a>
+        <a href="#Rotations">Rotations</a>
+      </div>
+      <div class="tab-content box">
+        <p class="note">You have a great opportunity to recommend your friends for open projects or apply for new opportunities inside GlobalLogic.</p>
+        <section class="my-referrals">
+          <div class="left">
+            <h2>Delphi Dev <span class ="refferal-id">(IRC95637)</span></h2>
+            <address class="location">India, Noida</address>
+          </div>
+          <div class="right">
+            <button>Add a Referral</button>
+            <p class="amount">10000 INR</p>
+          </div>
+        </section>
+        <div class="more">
+          <a href="#">Show More</a>
+        </div>
+      </div>
+
+      <article class="events box">
+        <img src="#" alt="Ravi Singh's Photo" class="event-member">
+        <h4><a href="#">Ravi Singh</a></h4>
+        <p class="reward">Recieved <em>Excellence Award</em> for Q4 FY'19</p>
+        <aside>
+          <div class="comment">
+            <img src="#" alt="username">
+            <input type="text" name="appraise" id="appraise" placeholder="Congratulate Ravi Singh">
+          </div>
+          <div class="comment">
+            <img src="" alt="username">
+            <input type="text" name="comment" id="comment" placeholder="Write a comment...">
+          </div>
+        </aside>
+      </article>
+    </div>
+
+    <div class="right-section">
+      <article class = "event-section box">
+        <h3 class="heading">
+          Birthdays & Anniversaries
+        </h3>
+        <div class ="carousel">
+          <ul class="occasion-list">
+            <li><img src="#" alt="Name 1"></li>
+            <li><img src="#" alt="Name 2"></li>
+            <li><img src="#" alt="Name 3"></li>
+            <li><img src="#" alt="Name 4"></li>
+          </ul>
+          <a href="#" class="next fa fa-angle-left"></a>
+          <a href="#" class="next fa fa-angle-right"></a>
+        </div>
+
+      </article>
+      <section class="images-container box">
+        <h3 class="heading">
+          Recent Photos
+        </h3>
+        <div class="all-images">
+          <p class="counts">
+            57211 picture and growing ..
+          </p>
+          <img src="" alt="User image" class = "user-image first-image">
+          <img src="" alt="User image" class = "user-image">
+          <img src="" alt="User image" class = "user-image">
+          <img src="" alt="User image" class = "user-image">
+          <img src="" alt="User image" class = "user-image">
+          <img src="" alt="User image" class = "user-image">
+          <img src="" alt="User image" class = "user-image">
+          <img src="" alt="User image" class = "user-image">
+          <img src="" alt="User image" class = "user-image">
+          <img src="" alt="User image" class = "user-image">
+          <img src="" alt="User image" class = "user-image">
+          <img src="" alt="User image" class = "user-image">
+          <img src="" alt="User image" class = "user-image">
+          <img src="" alt="User image" class = "user-image">
+          <img src="" alt="User image" class = "user-image">
+          <img src="" alt="User image" class = "user-image">
+          <img src="" alt="User image" class = "user-image">
+          <ul class="pagination">
+            <li><a href="#" class = "prev fa fa-step-backward"></a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">...</a></li>
+            <li><a href="#">2861</a></li>
+            <li><a href="#" class = "fa fa fa-step-forward"></a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

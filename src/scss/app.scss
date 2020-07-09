@@ -1,0 +1,22 @@
+// default imports 
+
+@import './layout/variables';
+@import './layout/mixins';
+@import './layout/base.scss';
+
+@import './layout/reset.scss';
+
+// font awesome icons
+
+@import './fa/brands.scss';
+@import './fa/regular.scss';
+@import './fa/solid.scss';
+@import './fa/fontawesome.scss';
+
+
+// Component imports
+
+@import './components/header.scss';
+@import './components/main.scss';
+
+

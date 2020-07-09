@@ -1,0 +1,91 @@
+
+*,
+*:before,
+*:after {
+  @include box-sizing();
+}
+
+
+body {
+  font-family: Georgia, serif;
+  font-size: 16px;
+  background-color: map-get($colors , 'background');
+  line-height: 1;
+  color: map-get($colors, 'grey');
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  &:empty {
+    color: map-get($colors, 'lightgrey' );
+    &:hover,
+    &:focus {
+      color: map-get($colors, "white");
+    }
+  }
+  &:not(:empty) {
+    color: map-get($colors, 'orange');
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+  nav &:not(:empty) {
+    color: map-get($colors, 'white');
+  }
+}
+
+nav ul{
+  @include flex;
+  li {
+    list-style: none;
+    margin-right: 5px;
+  }
+}
+
+input[type=text],
+input[type=search] {
+  width: 100%;
+  border: 0;
+  padding: 10px;
+}
+
+.select {
+  position: relative;
+  select {
+    @include vendor(appearance, 'none');
+    padding: 10px;
+    width: 100%;
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius:$border-radius;
+  }
+  &:after {
+    content: "▾";
+    font-weight: 900;
+    position: absolute;
+    right: 10px;
+    top: 25%;
+  }
+}
+
+// base styles
+
+.box {
+  background-color: map-get($colors, 'white' );
+  border-radius: $border-radius;
+  box-shadow: 0 2px 2px rgba(0,0,0, 0.2);
+  margin-bottom: 20px;
+}
+
+.bold-text {
+  @include font-specs(18, 18, 0);
+  font-weight: bold;
+}
+
+body h2 {
+  @extend .bold-text;
+}

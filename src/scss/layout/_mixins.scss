@@ -1,0 +1,72 @@
+// media-queries
+
+$breakpoints: (
+    "phone":             360px,
+    "phone-landscape":   480px,
+    "tablet":            768px,
+    "tablet-landscape":  1024px,
+    "desktop":           1248px,
+    "desktop-xl":        1440px
+);
+@mixin media-query($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+// font specs
+
+@function calculateRem($size) {
+  $remSize: $size / $base-font-size;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: #{$size}px;
+  font-size: calculateRem($size);
+}
+
+@mixin line-height($size, $font) {
+  line-height: $size/$font;
+}
+
+@mixin font-specs($font-size, $line-height, $letter-space:0) {
+  @include font-size($font-size);
+  @include line-height($line-height, $font-size);
+
+  @if $letter-space {
+      letter-spacing: #{$letter-space}px;
+  }
+
+  @else {
+      letter-spacing: 0;
+  }
+}
+
+
+@mixin flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin vendor($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -khtml-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  -o-#{$property}: #{$value};
+  #{$property}: #{$value};
+}
+
+@mixin box-sizing($type: border-box) {
+  @include vendor("box-sizing", $type);
+}

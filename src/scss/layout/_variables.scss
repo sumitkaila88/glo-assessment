@@ -1,0 +1,18 @@
+@use "sass:map";
+
+$colors: (
+  "background": #ececec,
+  "headerBG": #424142,
+  "orange": #f36f38,
+  "grey": #444,
+  "black": #000,
+  "lightgrey": #8c7f84,
+  "white": #fff,
+  "offWhite": #f8f8f8,
+  "post": #8a8aa6,
+);
+
+$base-font-size: 16;
+$orange: #f36f38;
+
+$border-radius: 3px
