@@ -147,3 +147,115 @@
     }
   }
 }
+
+
+.events {
+  .reward-section,
+  .comment {
+    padding: 10px 15px;
+  }
+  .reward-section {
+    overflow: auto;
+    img {
+      border: 1px solid map-get($colors, 'lightgrey');
+      border-radius: 50%;
+      float: left;
+      max-width: 50px;
+      margin-right: 10px;
+    }
+    .reward {
+      margin-top: 5px;
+      em {
+        font-weight: bold;
+      }
+    }
+  }
+  .comment {
+    background-color: map-get($colors, 'offWhite');
+    border-top: 1px solid map-get($colors, 'lightgrey');
+    &:last-child {
+      border-bottom: 1px solid map-get($colors, 'lightgrey');
+    }
+    img {
+      float: left;
+      max-width: 30px;
+      margin-right: 10px;
+    }
+    input {
+      width: calc(100% - 40px);
+      border: 1px solid map-get($colors, 'lightgrey');
+    }
+  }
+}
+
+.right-section {
+  .heading {
+    border-bottom: 1px solid map-get($colors, 'lightgrey');
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding: 15px;
+  }
+  .note {
+    text-align: center;
+  }
+  
+  .carousel {
+    @include flex;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+    .occasion-list {
+      @include flex;
+      flex: 1;
+      justify-content: space-around;
+    }
+  }
+  .view-all {
+    padding: 15px;
+    border-top: 1px solid map-get($colors, 'lightgrey');
+  }
+}
+
+.all-images {
+  padding: 15px;
+  .counts {
+    border: 1px solid map-get($colors, 'lightgrey');;
+    color: map-get($colors, 'lightgrey');
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+  .img-container {
+    overflow: auto;
+    .user-image {
+      float: left;
+      max-width: 66px;
+      &:first-child {
+        max-width: 132px;
+      }
+    }
+  }
+}
+
+.pagination {
+  @include flex;
+  width: 70%;
+  margin: 15px auto;
+  li {
+    align-self: center;
+  }
+  a {
+    padding: 5px;
+    border: 1px solid map-get($colors, 'lightgrey');
+    &.fa {
+      padding: 6px 5px;
+    }
+  }
+  .prev {
+    border-top-left-radius: $border-radius;
+    border-bottom-left-radius: $border-radius;
+  }
+  .next {
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+}
